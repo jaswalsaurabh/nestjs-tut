@@ -48,36 +48,36 @@ __decorate([
     __metadata("design:returntype", String)
 ], BooksController.prototype, "getHello", null);
 __decorate([
-    (0, common_1.Get)('book'),
+    (0, common_1.Get)("book"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Array)
 ], BooksController.prototype, "getAllBooks", null);
 __decorate([
-    (0, common_1.Get)('book/:id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Get)("book/:id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Object)
 ], BooksController.prototype, "getBookById", null);
 __decorate([
-    (0, common_1.Post)('book'),
+    (0, common_1.Post)("book"),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Object)
 ], BooksController.prototype, "addBook", null);
 __decorate([
-    (0, common_1.Patch)('book/:id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Patch)("book/:id"),
+    __param(0, (0, common_1.Param)("id")),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Object)
 ], BooksController.prototype, "updateBook", null);
 __decorate([
-    (0, common_1.Delete)('book/:id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Delete)("book/:id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)

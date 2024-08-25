@@ -1,5 +1,5 @@
-import { BooksService } from './app.service';
-import { Book, BookWithoutId } from './FakeDatabase';
+import { BooksService } from "./app.service";
+import { Book, BookWithoutId } from "./FakeDatabase";
 export declare class BooksController {
     private readonly booksService;
     constructor(booksService: BooksService);

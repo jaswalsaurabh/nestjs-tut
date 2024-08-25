@@ -1,4 +1,4 @@
-import { Book, BookWithoutId } from './FakeDatabase';
+import { Book, BookWithoutId } from "./FakeDatabase";
 export declare class BooksService {
     getHello(): string;
     getAllBooks(): Book[];

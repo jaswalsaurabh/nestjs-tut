@@ -6,9 +6,9 @@ import {
   Param,
   Patch,
   Post,
-} from '@nestjs/common';
-import { BooksService } from './app.service';
-import { Book, BookWithoutId } from './FakeDatabase';
+} from "@nestjs/common";
+import { BooksService } from "./app.service";
+import { Book, BookWithoutId } from "./FakeDatabase";
 
 @Controller()
 export class BooksController {
@@ -18,28 +18,28 @@ export class BooksController {
   getHello(): string {
     return this.booksService.getHello();
   }
-  @Get('book')
+  @Get("book")
   getAllBooks(): Book[] {
     return this.booksService.getAllBooks();
   }
-  @Get('book/:id')
-  getBookById(@Param('id') id: string): Book | undefined {
+  @Get("book/:id")
+  getBookById(@Param("id") id: string): Book | undefined {
     const bookId = +id;
     return this.booksService.getBook(bookId);
   }
-  @Post('book')
+  @Post("book")
   addBook(@Body() book: BookWithoutId): Book {
     const bookData = book;
     return this.booksService.addBook(bookData);
   }
 
-  @Patch('book/:id')
-  updateBook(@Param('id') id: string, @Body() book: Partial<Book>): Book {
+  @Patch("book/:id")
+  updateBook(@Param("id") id: string, @Body() book: Partial<Book>): Book {
     return this.booksService.updateBook(+id, book);
   }
 
-  @Delete('book/:id')
-  deleteBook(@Param('id') id: string) {
+  @Delete("book/:id")
+  deleteBook(@Param("id") id: string) {
     return this.booksService.deleteBook(+id);
   }
 }

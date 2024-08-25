@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
-import { Book, books, BookWithoutId } from './FakeDatabase';
+import { Injectable } from "@nestjs/common";
+import { Book, books, BookWithoutId } from "./FakeDatabase";
 
 @Injectable()
 export class BooksService {
   getHello(): string {
-    return 'Hello World Dost!';
+    return "Hello World Dost!";
   }
   getAllBooks(): Book[] {
     return books;
@@ -14,9 +14,9 @@ export class BooksService {
   }
   addBook(bookData: BookWithoutId): Book {
     const newId = books.length + 1;
-    console.log('bookData', bookData);
+    console.log("bookData", bookData);
     const newBook = { ...bookData, id: newId };
-    console.log('newBook', newBook);
+    console.log("newBook", newBook);
     books.push({ ...newBook });
     return newBook;
   }

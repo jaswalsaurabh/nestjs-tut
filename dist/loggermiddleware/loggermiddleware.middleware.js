@@ -6,22 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.LoggermiddlewareMiddleware = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const loggermiddleware_middleware_1 = require("./loggermiddleware/loggermiddleware.middleware");
-let AppModule = class AppModule {
-    configure(consumer) {
-        consumer.apply(loggermiddleware_middleware_1.LoggermiddlewareMiddleware).forRoutes("book");
+let LoggermiddlewareMiddleware = class LoggermiddlewareMiddleware {
+    use(req, res, next) {
+        console.log("this is req inside middleware");
+        next();
     }
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
-    (0, common_1.Module)({
-        imports: [],
-        controllers: [app_controller_1.BooksController],
-        providers: [app_service_1.BooksService],
-    })
-], AppModule);
-//# sourceMappingURL=app.module.js.map
+exports.LoggermiddlewareMiddleware = LoggermiddlewareMiddleware;
+exports.LoggermiddlewareMiddleware = LoggermiddlewareMiddleware = __decorate([
+    (0, common_1.Injectable)()
+], LoggermiddlewareMiddleware);
+//# sourceMappingURL=loggermiddleware.middleware.js.map

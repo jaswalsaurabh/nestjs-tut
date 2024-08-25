@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 const FakeDatabase_1 = require("./FakeDatabase");
 let BooksService = class BooksService {
     getHello() {
-        return 'Hello World Dost!';
+        return "Hello World Dost!";
     }
     getAllBooks() {
         return FakeDatabase_1.books;
@@ -21,9 +21,9 @@ let BooksService = class BooksService {
     }
     addBook(bookData) {
         const newId = FakeDatabase_1.books.length + 1;
-        console.log('bookData', bookData);
+        console.log("bookData", bookData);
         const newBook = { ...bookData, id: newId };
-        console.log('newBook', newBook);
+        console.log("newBook", newBook);
         FakeDatabase_1.books.push({ ...newBook });
         return newBook;
     }
